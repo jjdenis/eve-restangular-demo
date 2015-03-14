@@ -58,5 +58,7 @@ I need to understand Restangular a little further, for that I need Eve to show i
 >
 >  HTH"
 
-That logging is what I am studying now.
+That logging is what I am studying now, so I submitted a question to http://librelist.com/browser/flask/
+
+And I already got my first answer!
 
