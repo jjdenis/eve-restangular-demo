@@ -48,13 +48,15 @@ Try the following steps:
 What I am trying now
 ---------------------
 
-I need to understand Restangular a little further, for that I need Eve to show in console the http request from Restangular. I asked Nicola Iarocci, the creator of eve, and he just answered me:
+I need to understand Restangular a little further, for that I need Eve to show in console the http request from Restangular. I asked [Nicola Iarocci](https://github.com/nicolaiarocci), the creator of Eve, and he just answered me:
 
-    "You should probably give a look at Flask logging tutorial at http://flask.pocoo.org/docs/0.10/errorhandling/  
-
-    Eve is just a Flask application so whatever works with Flask works with Eve’s app too.
-
-    HTH"
+> "You should probably give a look at Flask logging tutorial at 
+>  http://flask.pocoo.org/docs/0.10/errorhandling/  
+>
+>  Eve is just a Flask application so whatever works with Flask works 
+>  with Eve’s app too.
+>
+>  HTH"
 
 That logging is what I am studying now.
 
