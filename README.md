@@ -1,11 +1,11 @@
-A minimal demo of eve and restangular.
+A minimal demo of Eve and Restangular.
 ======================================
 
-I am trying to get to grips with eve and restangular.
+I am trying to come to grips with Eve and Restangular.
 
 I will report my progress in this repository so it can help others following my same path.
 
-First I went through all the steps to quick start eve: http://python-eve.org/quickstart.html
+First I went through all the steps to quick-start Eve: http://python-eve.org/quickstart.html
 
 To be able go through the quickstart I have completed these steps:
 
@@ -13,8 +13,8 @@ To be able go through the quickstart I have completed these steps:
   - I got a running daemon of mongodb. For that I had to do this: 
       - I had to create a database folder: ~/Documents/mongodatabase
       - Under bin I have to run this command:  ./mongod --dbpath ~/Documents/mongodatabase
-  - I installed eve on my computer.
-  - Along the quickstart, Eve created a table named people.
+  - I installed Eve on my computer.
+  - Along the quickstart, Eve created a "table" named people.
   - I read a few things about http.
   - I read about curl.
   - Using curl, I created two "documents" inside people: Obama and Romney. 
@@ -22,18 +22,39 @@ To be able go through the quickstart I have completed these steps:
 
 So what then?
 
-Then I wanted to develop an basic CRUD app, using restangular.
+Then I wanted to develop an basic CRUD app, using Restangular.
 
-But I am not too skilled with web servers, flask, etc, so the html had to be served by eve itself. How? I had to read a bit about flask and finally came across this little trick! https://groups.google.com/d/msg/python-eve/Ay9sYD_V23Q/BmxweQUeWX8J
+But I am not too skilled with web servers, Flask, etc, so the html had to be served by Eve itself. How? I had to read a bit about flask and finally came across this little trick! https://groups.google.com/d/msg/python-eve/Ay9sYD_V23Q/BmxweQUeWX8J
 
-So far so good...
+It works! Eve is serving my html.
 
-This is a work in progress, so far I have managed to list all people and add new people, I am still figuring out how to delete and edit. 
+OK, to continue with the Restangular part, I learned a bit about angular.js here: http://www.w3schools.com/angular/
 
-If you want to run this demo:
+And now I am dabbling with https://github.com/mgonto/restangular
+
+So far I have managed to list all the people and add new people, BUT I AM STILL FIGURING OUT HOW TO DELETE AND EDIT. 
+
+If you want to run this demo
+-----------------------------
+
+Try the following steps:
 
   - Get the quickstart running.
   - Stop the quickstart run.py, but leave mongodb running
   - Fork this project onto your computer.
   - Run this demo:   python run-demo.py 
   - In your browser, go to http://127.0.0.1:5000
+
+What I am trying now
+---------------------
+
+I need to understand Restangular a little further, for that I need Eve to show in console the http request from Restangular. I asked Nicola Iarocci, the creator of eve, and he just answered me:
+
+    "You should probably give a look at Flask logging tutorial at http://flask.pocoo.org/docs/0.10/errorhandling/  
+
+    Eve is just a Flask application so whatever works with Flask works with Eve’s app too.
+
+    HTH"
+
+That logging is what I am studying now.
+
