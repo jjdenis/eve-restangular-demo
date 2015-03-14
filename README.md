@@ -43,7 +43,7 @@ Try the following steps:
   - Stop the quickstart run.py, but leave mongodb running
   - Fork this project onto your computer.
   - Run this demo:   python run-demo.py 
-  - In your browser, go to http://127.0.0.1:5000
+  - In your browser, go to http://127.0.0.1:5000/static/index.html
 
 What I am trying now
 ---------------------
