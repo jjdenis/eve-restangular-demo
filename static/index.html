@@ -19,7 +19,7 @@ my_app.config(function(RestangularProvider) {
 // Inject Restangular into your controller
 my_app.controller('MainCtrl',function(Restangular, $scope){
     // Creating Main Restangular object
-    var base_people = Restangular.all('api/people/_items')
+    var base_people = Restangular.all('api/people')
 
 
     base_people.getList().then(
@@ -47,16 +47,18 @@ my_app.controller('MainCtrl',function(Restangular, $scope){
 
 <div ng-controller="MainCtrl">
 
-<h1> DEmo of eve using restangular </h1>
+<h1> Demo of eve using restangular </h1>
 
 <h2> List of persons in people. </h2>
 
-<div ng-repeat="person in people">
-    name is: {{person.firstname}} {{person.lastname}} {{person._id}}<br/>
+<div ng-repeat="person in people._items">
+    name is: {{person.firstname}} {{person.lastname}}, 
+    id is: {{person._id}}<br/>
     change name:     <input type="text" ng-model="person.firstname"/>  <button type="submit" ng-click="person.put()">update</button>
     change lastname: <input type="text" ng-model="person.lastname"/>   
     <button type="submit" ng-click="person.put()">update</button>
     <button type="submit" ng-click="delete(person._id)">delete</button>
+    <br/><br/>
 </div>
 
 

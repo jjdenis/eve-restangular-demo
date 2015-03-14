@@ -1,9 +1,11 @@
 A minimal demo of eve and restangular.
 ======================================
 
-I am trying to get to grips with eve and restangular, I will report my porgress in this repository so it can help others and maybe to get help myself.
+I am trying to get to grips with eve and restangular.
 
-I went through all the steps to quick start eve: http://python-eve.org/quickstart.html
+I will report my progress in this repository so it can help others following my same path.
+
+First I went through all the steps to quick start eve: http://python-eve.org/quickstart.html
 
 To be able go through the quickstart I have completed these steps:
 
@@ -18,21 +20,20 @@ To be able go through the quickstart I have completed these steps:
   - Using curl, I created two "documents" inside people: Obama and Romney. 
     It felt like magic.
 
-So what now?
+So what then?
 
-Now I want to develop an basic CRUD app, using restangular.
+Then I wanted to develop an basic CRUD app, using restangular.
 
-But I am not too skilled with web servers, wgi, etc so...
+But I am not too skilled with web servers, flask, etc, so the html had to be served by eve itself. How? I had to read a bit about flask and finally came across this little trick! https://groups.google.com/d/msg/python-eve/Ay9sYD_V23Q/BmxweQUeWX8J
 
-The html, css, and js will be served by eve itself. How? I had to read a bit about flask and finally came across this little trick! https://groups.google.com/d/msg/python-eve/Ay9sYD_V23Q/BmxweQUeWX8J
+So far so good...
 
 This is a work in progress, so far I have managed to list all people and add new people, I am still figuring out how to delete and edit. 
 
+If you want to run this demo:
 
-To run the demo:
-
-- Get the quickstart running.
-- Stop the quickstart run.py, but leave mongodb running
-- Clone or fork this project on your computer.
-- Run this demo:   python run-demo.py 
-- In your browser, go to http://127.0.0.1:5000
+  - Get the quickstart running.
+  - Stop the quickstart run.py, but leave mongodb running
+  - Fork this project onto your computer.
+  - Run this demo:   python run-demo.py 
+  - In your browser, go to http://127.0.0.1:5000
