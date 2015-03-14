@@ -1,0 +1,32 @@
+
+{
+"_items": [
+
+    {"firstname": "barack", 
+     "lastname": "obama", 
+     "_id": "54ec55ec34ef3102c8dc6406", 
+     "_links": {"self": {"href": "people/54ec55ec34ef3102c8dc6406", "title": "person"}}, 
+     "_created": "Tue, 24 Feb 2015 10:43:56 GMT",
+     "_updated": "Tue, 24 Feb 2015 10:43:56 GMT",  
+     "_etag": "8e2a36d938015cc2324d62913d890329956d281e"
+    }, 
+
+    {"firstname": "mitt", 
+     "lastname": "romney", 
+     "_id": "54ec55ec34ef3102c8dc6407", 
+     "_links": {"self": {"href": "people/54ec55ec34ef3102c8dc6407", "title": "person"}}, 
+     "_created": "Tue, 24 Feb 2015 10:43:56 GMT",
+     "_updated": "Tue, 24 Feb 2015 10:43:56 GMT",  
+     "_etag": "1e12f4dc39efd821b2cfd14f39132282dcca9b76"
+    }
+    
+], 
+
+"_links": {
+    "self": {"href": "people", "title": "people"}, 
+    "parent": {"href": "/", "title": "home"}
+    }, 
+
+"_meta": {"max_results": 25, "total": 2, "page": 1}
+
+}
