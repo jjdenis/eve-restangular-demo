@@ -52,9 +52,9 @@ I need to understand Restangular a little further, for that I need Eve to show i
 >
 >  HTH"
 
-That logging is what I am studying now, so I submitted a question to flask@librelist.com. And [David Nieder](https://github.com/davidnieder?tab=repositories) gave me a quick and dirty trick (I am beginning to love this):
+I have been studying that logging, even proposed a fix in werkzeug: https://github.com/jjdenis/werkzeug/tree/curl_logging.
 
-http://librelist.com/browser//flask/2015/3/14/show-full-http-request-and-response-on-console/
+But I also submitted a question to flask@librelist.com. And [David Nieder](https://github.com/davidnieder?tab=repositories) gave me a quick and dirty trick (I am beginning to love this): http://librelist.com/browser//flask/2015/3/14/show-full-http-request-and-response-on-console/
 
 Now I have Eve logging the requests, great!
 
