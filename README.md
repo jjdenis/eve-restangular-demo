@@ -24,6 +24,10 @@ So what then?
 
 Then I wanted to develop an basic CRUD app, using Restangular.
 
+
+The making of a static web server
+----------------------------------
+
 But I am not too skilled with web servers, Flask, etc, so the html had to be served by Eve itself. How? I had to read a bit about flask and finally came across this little trick! https://groups.google.com/d/msg/python-eve/Ay9sYD_V23Q/BmxweQUeWX8J
 
 It works! Eve is serving my html.
@@ -34,18 +38,8 @@ And now I am dabbling with https://github.com/mgonto/restangular
 
 So far I have managed to list all the people and add new people, BUT I AM STILL FIGURING OUT HOW TO DELETE AND EDIT. 
 
-If you want to run this demo
------------------------------
 
-Try the following steps:
-
-  - Get the quickstart running.
-  - Stop the quickstart run.py, but leave mongodb running
-  - Fork this project onto your computer.
-  - Run this demo:   python run-demo.py 
-  - In your browser, go to http://127.0.0.1:5000/static/index.html
-
-What I am trying now
+Making a verbose log.
 ---------------------
 
 I need to understand Restangular a little further, for that I need Eve to show in console the http request from Restangular. I asked [Nicola Iarocci](https://github.com/nicolaiarocci), the creator of Eve, and he just answered me:
@@ -58,7 +52,25 @@ I need to understand Restangular a little further, for that I need Eve to show i
 >
 >  HTH"
 
-That logging is what I am studying now, so I submitted a question to http://librelist.com/browser/flask/
+That logging is what I am studying now, so I submitted a question to flask@librelist.com. And [David Nieder](https://github.com/davidnieder?tab=repositories) gave a quick and dirty trick:
 
-And I already got my first answer!
+http://librelist.com/browser//flask/2015/3/14/show-full-http-request-and-response-on-console/
+
+Now I have Eve logging the requests, great!
+
+Next thing I need is to show the resource if it is json.
+
+
+
+If you want to run this demo
+-----------------------------
+
+Try the following steps:
+
+  - Get the quickstart running.
+  - Stop the quickstart run.py, but leave mongodb running
+  - Fork this project onto your computer.
+  - Run this demo:   python run-demo.py 
+  - In your browser, go to http://127.0.0.1:5000/static/index.html
+
 
