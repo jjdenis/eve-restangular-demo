@@ -56,31 +56,33 @@ I have been studying that logging, even proposed a fix in werkzeug: https://gith
 
 But I also submitted a question to flask@librelist.com. And [David Nieder](https://github.com/davidnieder?tab=repositories) gave me a quick and dirty trick (I am beginning to love this): http://librelist.com/browser//flask/2015/3/14/show-full-http-request-and-response-on-console/
 
-Now I have Eve logging the requests, great!
+So I had Eve logging the requests, great!
+
+The next thing I needed was to log the resource when it is json, and I have tried to log it gracefully, using pprint and wrap.
 
     $ python run-demo.py 
     * Running on http://127.0.0.1:5000/
     * Restarting with reloader
     
-     > GET http://127.0.0.1:5000/static/index.html
-     > Content-Length:
-     > User-Agent: curl/7.24.0 (x86_64-apple-darwin12.0)
-                   libcurl/7.24.0 OpenSSL/0.9.8| zlib/1.2.5
-     > Host: 127.0.0.1:5000
-     > Accept: */*
-     > Content-Type:
-    
-     < 200 OK
-     > Content-Length: 2221
-     > Content-Type: text/html; charset=utf-8
-     > Last-Modified: Sat, 14 Mar 2015 17:17:41 GMT
-     > Cache-Control: public, max-age=43200
-     > Expires: Mon, 16 Mar 2015 05:03:03 GMT
-     > ETag: "flask-1426353461.0-2221-2815237657"
-     > Date: Sun, 15 Mar 2015 17:03:03 GMT
+    > GET http://127.0.0.1:5000/
+    > Content-Length:
+    > User-Agent: curl/7.30.0
+    > Host: 127.0.0.1:5000
+    > Accept: */*
+    > Content-Type:
+     
+    < 404 NOT FOUND
+    < Content-Type: application/json
+    < Content-Length: 179
+    < {u'_error': {u'code': 404,
+    <              u'message': u'The requested URL was not found on the server.  If
+                                 you entered the URL manually please check your
+                                 spelling and try again.'},
+    <  u'_status': u'ERR'}
+    127.0.0.1 - - [17/Mar/2015 09:29:18] "GET / HTTP/1.1" 404 -
 
+Next, log html.
 
-Next thing I need is to show the resource if it is json.
 
 
 
