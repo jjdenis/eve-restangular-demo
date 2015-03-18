@@ -91,9 +91,9 @@ I also found that by doing this in Eve...
 
     IF_MATCH = False
 
-...I got Delete to work, but concurrency control gets disabled (the etag are not used by Eve)
+...I got Delete to work, but concurrency control gets disabled (the Etags are not used by Eve)
 
-I have to find out why update does'nt work and how to enable ETags in Restangualar.
+I have to find out why Update doesn't work and how to enable ETags in Restangular.
 
 
 If you want to run this demo
