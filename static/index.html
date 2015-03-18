@@ -33,13 +33,14 @@ my_app.config(function(RestangularProvider) {
 
 // Inject Restangular into your controller
 my_app.controller('MainCtrl',function(Restangular, $scope){
+
+    function update_people(people){$scope.people = people;}
+
     // Creating Main Restangular object
     var base_people = Restangular.all('api/people')
 
 
-    base_people.getList().then(
-        function(people){$scope.people = people;}
-        );
+    base_people.getList().then( update_people );
 
     $scope.add = function() {
         base_people.post($scope.newPerson).then(
@@ -52,8 +53,12 @@ my_app.controller('MainCtrl',function(Restangular, $scope){
         console.log(person_id);
         p=$scope.people.one(person_id);
         p.remove();
+        update_people();
         }
 });
+
+
+
 
 </script>
 </head>

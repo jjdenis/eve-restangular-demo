@@ -26,27 +26,27 @@ LINE_LENGTH = 80
 @app.before_request
 def before():
     print('\n\n')
-    print '> %s %s' % (request.method, request.url)
+    print '< %s %s' % (request.method, request.url)
     for k, v in request.headers:
-        print wrap_header(k, v, '>')
+        print wrap_header(k, v, '<')
 
     # print(request.headers['content-type'])
     # print('')
 
     if request.mimetype == 'application/json':
-        print wrap_json(request.data, '>')
+        print wrap_json(request.data, '<')
 
     print('')
 
 
 @app.after_request
 def after(response):
-    print '< %s' % response.status
+    print '> %s' % response.status
     for k, v in response.headers:
-        print wrap_header(k, v, '<')
+        print wrap_header(k, v, '>')
 
     if response.mimetype == 'application/json':
-        print wrap_json(response.data, '<')
+        print wrap_json(response.data, '>')
 
     return response
 
@@ -81,3 +81,13 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+#     elif response.mimetype == 'text/html':
+#         print wrap_html(response.data, '<')
+
+# def wrap_html(html_string, sign):
+#     separated = html_string.split('\n')
+#     space = '\n {}'.format(sign)
+
+#     return space.join(separated[0:10])

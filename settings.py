@@ -12,8 +12,11 @@ MONGO_USERNAME = ''
 MONGO_PASSWORD = ''
 MONGO_DBNAME = 'apitest'
 
-
+ETAG = 'ETag'
 DEBUG = True
+
+# This disables concurrent concurrency control.
+IF_MATCH = False
 
 # Enable reads (GET), inserts (POST) and DELETE for resources/collections
 # (if you omit this line, the API will default to ['GET'] and provide

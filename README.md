@@ -81,9 +81,19 @@ The next thing I needed was to log the resource when it is json, and I have trie
     <  u'_status': u'ERR'}
     127.0.0.1 - - [17/Mar/2015 09:29:18] "GET / HTTP/1.1" 404 -
 
-Next, log html.
 
+Making Update and Delete work
+-------------------------------
 
+I can see Restangular is not using ETags at all.
+
+I also found that by doing this in Eve...
+
+    IF_MATCH = False
+
+...I got Delete to work, but concurrency control gets disabled (the etag are not used by Eve)
+
+I have to find out why update does'nt work and how to enable ETags in Restangualar.
 
 
 If you want to run this demo
